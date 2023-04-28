@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
-    "jest": "^29.5.0"
+    "inquirer": "^8.2.4"
   },
   "name": "svg",
   "version": "1.0.0",
@@ -10,10 +9,13 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
