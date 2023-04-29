@@ -1,0 +1,4 @@
+<svg width="300" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill=gold stroke="#000" stroke-linecap="round">
+<circle cx="50" cy="50" r="50" />
+<text x="50%" y="50%" font-size = "1.7em" text-anchor="middle" fill="purple">JJJ</text>
+</svg>
