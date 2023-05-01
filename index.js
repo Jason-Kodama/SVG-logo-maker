@@ -28,22 +28,20 @@ inquirer
     }
     ])
     .then((answers) => {
-        console.log(answers)
         let shape 
         if(answers.shape === 'circle') {
-            shape = new shapes.Circle()
+            shape = new shapes.Circle(answers.shapeColor)
         }else if(answers.shape ==='triangle'){
-            shape = new shapes.Triangle()
+            shape = new shapes.Triangle(answers.shapeColor)
         }else if(answers.shape === 'square'){
-            shape = new shapes.Square()
+            shape = new shapes.Square(answers.shapeColor)
         }
-        const theSvg = `<svg width="300" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill=${answers.shapeColor} stroke="#000" stroke-linecap="round">
+        const theSvg = `<svg width="300" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="#000" stroke-linecap="round">
 ${shape.render()}
 <text x="50%" y="50%" font-size = "1.7em" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>
 </svg>`
-        return fs.promises.writeFile('Logo.svg', theSvg)
+        return fs.promises.writeFile('logo.svg', theSvg)
     })
     .then(() => {
-        console.log('generated file')
+        console.log('Generated logo.svg')
     })
-    
