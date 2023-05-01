@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs')
 const shapes = require('./lib/shapes');
 
-//const generateShapes =
-
 inquirer
     .prompt([{
         type: 'input',
@@ -36,7 +34,7 @@ inquirer
         }else if(answers.shape === 'square'){
             shape = new shapes.Square(answers.shapeColor)
         }
-        const theSvg = `<svg width="300" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="#000" stroke-linecap="round">
+        const theSvg = `<svg width="300px" height="200px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="#000" stroke-linecap="round">
 ${shape.render()}
 <text x="50%" y="50%" font-size = "1.7em" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>
 </svg>`
